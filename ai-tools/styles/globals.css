@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    background-image: url("/background.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select {
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+
+*:disabled {
+    cursor: not-allowed;
+}
+
+:root {
+    --background: #0a192f;
+    --g-background: rgba(255, 255, 255, 0.2);
+    --g-border: rgba(255, 255, 255, 0.5);
+    --text-primary: #fff;
+    --text-secondary: #d4d4d4;
+    --text-accent: #0070f3;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--button-secondary);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--button-primary);
+}

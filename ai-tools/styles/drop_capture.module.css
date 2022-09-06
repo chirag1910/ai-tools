@@ -1,0 +1,23 @@
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px dashed var(--g-border);
+}
+
+.container svg {
+    width: 100px;
+    height: 100px;
+    fill: var(--text-primary);
+}

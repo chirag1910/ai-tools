@@ -1,0 +1,146 @@
+.main {
+    --background: #000e0f;
+    --text-accent: #35a1aa;
+}
+
+.main {
+    background-color: var(--background);
+    background-image: url("/background_3.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.main h1 {
+    font-size: xxx-large;
+    color: var(--text-accent);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.main p {
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+}
+.container.partition {
+    grid-template-columns: 2fr 3fr;
+}
+
+.left,
+.right {
+    background-color: var(--g-background);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    max-height: 90vh;
+    min-height: 50vh;
+    transition: border-color 300ms ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+.left.empty {
+    height: 50vh;
+}
+.left.empty:hover {
+    border-color: var(--g-border);
+}
+
+.left label {
+    width: 100%;
+    height: 100%;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.right {
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.right.empty {
+    justify-content: center;
+}
+
+.right label {
+    width: 100%;
+}
+
+.right p {
+    font-size: medium;
+    color: var(--text-secondary);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    margin-top: 0;
+    width: 100%;
+}
+
+.right p p {
+    text-align: left;
+}
+
+.right p span {
+    font-size: x-large;
+    text-align: center;
+}
+
+.right button {
+    background-color: var(--g-background);
+    color: var(--text-primary);
+    border-radius: 7px;
+    padding: 12px 18px;
+    font-size: large;
+    width: 100%;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out;
+}
+.right button:not(:disabled):hover {
+    box-shadow: 3px 3px 25px var(--g-background);
+}
+.right label button {
+    background-color: var(--text-accent);
+}
+.right label button:hover {
+    box-shadow: 3px 3px 25px var(--text-accent);
+}
+
+.right.loading {
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right.loading p {
+    margin-top: 20px;
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+}

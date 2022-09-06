@@ -1,0 +1,146 @@
+.main {
+    --background: #1c2033;
+    --text-accent: #975e6f;
+}
+
+.main {
+    background-color: var(--background);
+    background-image: url("/background_5.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.main h1 {
+    font-size: xxx-large;
+    color: var(--text-accent);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.main p {
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+}
+.container.partition {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left,
+.right {
+    background-color: var(--g-background);
+    border: 3px solid transparent;
+    border-radius: 10px;
+    transition: border-color 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+.left.animate:hover {
+    border-color: var(--g-border);
+}
+
+.left label {
+    width: 100%;
+    height: 100%;
+}
+
+.left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right {
+    padding: 40px;
+    gap: 20px;
+}
+
+.right p {
+    font-size: xx-large;
+    color: var(--text-secondary);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-align: center;
+    margin-top: 0;
+}
+
+.right p span {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.right .confidence {
+    width: 100%;
+    background-color: var(--g-background);
+    border-radius: 10px;
+    padding: 20px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right .confidence .bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--g-background);
+}
+
+.right .confidence p {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.right p.button {
+    margin-top: 40px;
+    background-color: var(--text-accent);
+    color: var(--text-primary);
+    border-radius: 7px;
+    padding: 12px 18px;
+    font-size: large;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out;
+}
+.right p.button:hover {
+    box-shadow: 3px 3px 25px var(--text-accent);
+}
+
+.right.loading .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right.loading p {
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+}

@@ -1,0 +1,151 @@
+.main {
+    --background: #150941;
+    --text-accent: #c60033;
+}
+
+.main {
+    background-color: var(--background);
+    background-image: url("/background_4.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px;
+}
+
+.main h1 {
+    font-size: xxx-large;
+    color: var(--text-accent);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.main p {
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+    overflow-wrap: anywhere;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    width: 100%;
+}
+.container.partition {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left,
+.right {
+    background-color: var(--g-background);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+}
+
+.left form {
+    width: 100%;
+}
+
+.left form .formControl {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 15px;
+}
+
+.formControl label {
+    color: var(--text-secondary);
+    font-size: medium;
+    font-weight: 500;
+}
+
+.formControl input,
+.formControl select {
+    background-color: var(--g-background);
+    padding: 7px 10px;
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-size: large;
+    font-weight: 600;
+    width: 100%;
+    border: 2px solid transparent;
+    transition: border-color 300ms ease-in-out;
+}
+.formControl input::placeholder {
+    color: var(--text-secondary);
+}
+.formControl input:hover,
+.formControl select:hover,
+.formControl input:focus,
+.formControl select:focus {
+    border-color: var(--g-border);
+}
+
+.formControl select option {
+    background-color: #0a192f;
+}
+
+.left form button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: var(--text-accent);
+    color: var(--text-primary);
+    border-radius: 7px;
+    padding: 12px 18px;
+    font-size: medium;
+    cursor: pointer;
+    transition: box-shadow 300ms ease-in-out;
+}
+.left form button:hover {
+    box-shadow: 3px 3px 25px var(--text-accent);
+}
+
+.right p {
+    font-size: xx-large;
+    color: var(--text-secondary);
+    font-weight: 600;
+    overflow-wrap: anywhere;
+    text-align: center;
+    margin-top: 0;
+}
+
+.right p span {
+    color: greenyellow;
+    font-weight: 700;
+}
+.right p span.yes {
+    color: orange;
+}
+
+.right.loading .loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.right.loading p {
+    font-size: x-large;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
