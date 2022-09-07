@@ -61,8 +61,11 @@ def ocr(request):
                     "status": "ok",
                     "result": res
                 })
-        except:
-            None
+        except Exception as e:
+            return JsonResponse({
+                "status": "error",
+                "error": str(e)
+            })
 
     return JsonResponse({
         "status": "error",

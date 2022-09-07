@@ -3,7 +3,9 @@ from cv2 import imdecode, IMREAD_COLOR, cvtColor, COLOR_BGR2RGB
 from numpy import frombuffer, uint8
 from base64 import b64decode
 
-pytesseract.pytesseract.tesseract_cmd = "C:\\Users\\chira\\AppData\\Local\\Tesseract-OCR\\tesseract.exe"
+# update tesseract.exe path here
+# default path is r"C:\Users\<user>\AppData\Local\Tesseract-OCR\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = r""
 config = ('-l eng --oem 1 --psm 3')
 
 
