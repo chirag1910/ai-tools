@@ -46,43 +46,47 @@
 
 ### API
 
-Go to the project directory
+1.  Go to the project directory
 
-```bash
-  cd api
-```
+    ```bash
+      cd api
+    ```
 
-Install dependencies
+2.  Install tesseract using windows installer available [here](https://github.com/UB-Mannheim/tesseract/wiki)
 
-```bash
-  pip install -r requirements.txt
-```
+3.  Update the installed `tesseract.exe` path in `api\api\workers\ocr_worker.py`
 
-Start the server
+4.  Install other dependencies
 
-```bash
-  manage.py runserver
-```
+    ```bash
+      pip install -r requirements.txt
+    ```
+
+5.  Start the server
+
+    ```bash
+      manage.py runserver
+    ```
 
 ### Website
 
-Go to the project directory
+1.  Go to the project directory
 
-```bash
-  cd ai-tools
-```
+    ```bash
+      cd ai-tools
+    ```
 
-Install dependencies
+2.  Install dependencies
 
-```bash
-  npm i
-```
+    ```bash
+      npm i
+    ```
 
-Start the server
+3.  Start the server
 
-```bash
-  npm run dev
-```
+    ```bash
+      npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) on your browser to see the result.
 
@@ -90,76 +94,14 @@ Open [http://localhost:3000](http://localhost:3000) on your browser to see the r
 
 ```
 ai-tools
-│   .gitignore
-│   LICENSE
-│   README.md
-│
 ├───ai-tools
-│   │   .eslintrc.json
-│   │   .gitignore
-│   │   next.config.js
-│   │   package-lock.json
-│   │   package.json
-│   │
-│   ├───components
-│   │       DropZone.js
-│   │       Loader.js
-│   │
-│   ├───pages
-│   │       animal_classification.js
-│   │       heart_disease.js
-│   │       index.js
-│   │       ocr.js
-│   │       spam_classification.js
-│   │       _app.js
-│   │       _document.js
-│   │
-│   ├───public
-│   │       background.svg
-│   │       background_2.svg
-│   │       background_3.svg
-│   │       background_4.svg
-│   │       background_5.svg
-│   │       favicon.ico
-│   │
-│   ├───styles
-│   │       animal_classification.module.css
-│   │       drop_capture.module.css
-│   │       globals.css
-│   │       heart_disease.module.css
-│   │       home.module.css
-│   │       loader.module.css
-│   │       ocr.module.css
-│   │       spam_classification.module.css
-│   │
-│   └───utils
-│           api.js
 │
 ├───api
-│   │   .gitignore
-│   │   db.sqlite3
-│   │   manage.py
-│   │   requirements.txt
-│   │
 │   └───api
-│       │   asgi.py
-│       │   settings.py
-│       │   urls.py
-│       │   views.py
-│       │   wsgi.py
-│       │   __init__.py
-│       │
-│       ├───saved_models
-│       │   ├───heart_disease_predictor
-│       │   ├───image_classifier
-│       │   └───spam_classifier
-│       │
-│       └───workers
-│               heart_disease_predictor.py
-│               image_classifier.py
-│               main.py
-│               ocr_worker.py
-│               spam_classifier.py
+│       └───saved_models
+│           ├───heart_disease_predictor
+│           ├───image_classifier
+│           └───spam_classifier
 │
 ├───datasets
 │   │   heart_disease.csv
@@ -167,10 +109,6 @@ ai-tools
 │   └───animals
 │
 └───model-builders
-        heart_disease.py
-        image_classifier.py
-        requirements.txt
-        spam.py
 ```
 
 ## Authors
