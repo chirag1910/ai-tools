@@ -115,4 +115,3 @@ ai-tools
 
 -   [@chirag](https://github.com/chirag1910)
 -   [@anshpreet](https://github.com/Ansh-3101)
--   [@paras](https://github.com/qJNC)
